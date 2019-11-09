@@ -129,8 +129,8 @@ while (total_adds < total[0]):  # Website shows x results but, can only x-2 can 
     write_log("║  [" + "{:03d}".format(x) + "]" + "  ║  Repeats: [" +
     "{:02d}".format(repeats) + "]  ║  Total: [" + "{:04d}".format(total_adds) +
     "/" + str(total[0]) + "] (+" + "{:02d}".format(adds) + ")  ║  Category: [" +
-    "{:02d}".format(category) + "[" + "{:03d}".format(total_category_adds) + "/" +
-    "{:03d}".format(total[category - 8]) + "]] ║" + "  Using Token [" +
+    "{:02d}".format(category) + "(" + "{:03d}".format(total_category_adds) + "/" +
+    "{:03d}".format(total[category - 8]) + ")] ║" + "  Using Token [" +
     token + "]  ║", 1, "log.txt")
 
     x += 1
