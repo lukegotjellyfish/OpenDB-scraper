@@ -144,11 +144,13 @@ with io.open("trivia.csv",'w', encoding='utf-8', newline='') as f:
     file = csv.writer(f, delimiter=',')
     file.writerow(["Category", "Type", "Difficulty", "Question", "Answer", "Incorred Answers"])
     for i in range(0, len(answers)):
+        if (qtype[i] == "Ym9vbGVhbg=="):
+            continue
         file.writerow([
         str(base64.b64decode(qcategories[i]), "utf-8"),
         str(base64.b64decode(qtype[i]), "utf-8"),
         str(base64.b64decode(qdifficulty[i]), "utf-8"),
-        questions[i],
+        questions[i].replace("\\",""),
         answers[i],
         qincorrect_answers[i]])
         final += 1
